@@ -43,5 +43,5 @@ export const events: EventItem[] = [
         location: "Meanjin/Brisbane",
         url: "",
         img: "",
-    }
+    },
 ];

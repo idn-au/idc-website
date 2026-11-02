@@ -6,7 +6,7 @@ const useIdFunction = () => useId();
 
 <template>
     <NuxtRouteAnnouncer />
-    <ConfigProvider :use-id="useIdFunction">
+    <ConfigProvider :useId="useIdFunction">
         <NuxtLayout>
             <NuxtPage />
         </NuxtLayout>

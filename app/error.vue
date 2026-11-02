@@ -1,29 +1,31 @@
 <script setup lang="ts">
+import type { NuxtError } from "#app";
 import { CircleAlert } from "@lucide/vue";
-import type { NuxtError } from '#app'
 
 const props = defineProps({
-	error: Object as () => NuxtError,
+    error: Object as () => NuxtError,
 });
 
 useHead({
-	titleTemplate: (titleChunk) => `${props.error?.statusMessage || 'Error'} | The Indigenous Data Network`
+    titleTemplate: titleChunk => `${props.error?.statusText || "Error"} | The Indigenous Data Network`,
 });
 </script>
 
 <template>
-	<NuxtLayout>
-		<div>
-			<Alert variant="destructive" class="border-destructive">
-				<CircleAlert />
-				<AlertTitle>
-					{{props.error?.statusMessage || "Error"}}
-				</AlertTitle>
-				<AlertDescription>
-					{{props.error?.message}}
-				</AlertDescription>
-			</Alert>
-		</div>
-		<NuxtLink to="/">Go home</NuxtLink>
-	</NuxtLayout>
+    <NuxtLayout>
+        <div>
+            <Alert variant="destructive" class="border-destructive">
+                <CircleAlert />
+                <AlertTitle>
+                    {{ props.error?.statusText || "Error" }}
+                </AlertTitle>
+                <AlertDescription>
+                    {{ props.error?.message }}
+                </AlertDescription>
+            </Alert>
+        </div>
+        <NuxtLink to="/">
+            Go home
+        </NuxtLink>
+    </NuxtLayout>
 </template>

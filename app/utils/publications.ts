@@ -1,11 +1,11 @@
 export const publications: PublicationItem[] = [
     {
-    title: "Framework for the Governance of Indigenous Data: HASS and Indigenous Research Data Commons",
-    author: ["Langton, M., McLellan, R., Fewster, J., & Smith, K."],
-    date: "2026",
-    publisher: "Australian Research Data Commons",
-    url: "https://doi.org/10.5281/zenodo.11135961",
-    idn: true,
+        title: "Framework for the Governance of Indigenous Data: HASS and Indigenous Research Data Commons",
+        author: ["Langton, M., McLellan, R., Fewster, J., & Smith, K."],
+        date: "2026",
+        publisher: "Australian Research Data Commons",
+        url: "https://doi.org/10.5281/zenodo.11135961",
+        idn: true,
     },
     {
         title: "Developing and Adopting Indigenous Data Governance Frameworks: A report of the Indigenous Data Network Roundtable 2024 (Version 1)",
