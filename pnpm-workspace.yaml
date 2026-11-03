@@ -6,4 +6,4 @@ allowBuilds:
   sharp: true
   vue-demi: true
 minimumReleaseAgeExclude:
-  - '@idn-au/idn-lib@1.0.0'
+  - '@idn-au/idn-lib@1.0.1'

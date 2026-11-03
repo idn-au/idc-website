@@ -33,7 +33,7 @@ const filteredPublications = computed(() => {
         </InputGroup>
         <div class="flex flex-col items-center gap-4">
             <div class="max-w-xl w-full flex flex-col gap-2">
-                <Item v-for="publication in filteredPublications" variant="outline" :class="publication.url ? 'hover:bg-accent' : ''" asChild>
+                <Item v-for="publication in filteredPublications" variant="outline" :class="`bg-background ${publication.url ? 'hover:bg-accent' : ''}`" asChild>
                     <component :is="publication.url ? 'a' : 'div'" :href="publication.url" class="hover:!no-underline !text-foreground">
                         <ItemMedia :variant="publication.img ? 'image' : 'icon'">
                             <NuxtImg v-if="publication.img" :src="publication.img" />
