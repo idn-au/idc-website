@@ -1,16 +1,16 @@
 <script setup lang="ts">
+import type { ContentNavigationItem } from "@nuxt/content";
 import { Home } from "@lucide/vue";
 import { findPageBreadcrumb } from "@nuxt/content/utils";
-import type {ContentNavigationItem} from "@nuxt/content";
-import {getNavigation} from "~/utils/helpers";
+import { getNavigation } from "~/utils/helpers";
 
 const route = useRoute();
 
 const { data: navigation } = await useAsyncData("navigation", () => getNavigation(), {
-	default: () => [] as ContentNavigationItem[],
+    default: () => [] as ContentNavigationItem[],
 });
 
-const breadcrumbs = computed(() => findPageBreadcrumb(navigation.value, route.path, {indexAsChild: true}));
+const breadcrumbs = computed(() => findPageBreadcrumb(navigation.value, route.path, { indexAsChild: true }));
 
 const currentPage = computed(() => breadcrumbs.value[breadcrumbs.value.length - 1]?.children?.find(c => c.path === route.path));
 </script>
@@ -20,10 +20,12 @@ const currentPage = computed(() => breadcrumbs.value[breadcrumbs.value.length - 
         <BreadcrumbList class="p-0 list-none">
             <template v-if="route.path !== navigation?.[0].path">
                 <BreadcrumbItem>
-                    <BreadcrumbLink as-child>
+                    <BreadcrumbLink asChild>
                         <NuxtLink :to="navigation?.[0].path">
-	                        <Home v-if="navigation?.[0].path === '/'" class="size-4" />
-	                        <template v-else>{{ navigation?.[0].title }}</template>
+                            <Home v-if="navigation?.[0].path === '/'" class="size-4" />
+                            <template v-else>
+                                {{ navigation?.[0].title }}
+                            </template>
                         </NuxtLink>
                     </BreadcrumbLink>
                 </BreadcrumbItem>
@@ -32,9 +34,13 @@ const currentPage = computed(() => breadcrumbs.value[breadcrumbs.value.length - 
             <template v-for="crumb in breadcrumbs">
                 <template v-if="crumb.path !== currentPage?.path">
                     <BreadcrumbItem>
-                        <BreadcrumbPage v-if="crumb.page === false">{{ crumb.title }}</BreadcrumbPage>
-                        <BreadcrumbLink v-else as-child>
-                            <NuxtLink :to="crumb.path">{{ crumb.title }}</NuxtLink>
+                        <BreadcrumbPage v-if="crumb.page === false">
+                            {{ crumb.title }}
+                        </BreadcrumbPage>
+                        <BreadcrumbLink v-else asChild>
+                            <NuxtLink :to="crumb.path">
+                                {{ crumb.title }}
+                            </NuxtLink>
                         </BreadcrumbLink>
                     </BreadcrumbItem>
                     <BreadcrumbSeparator />

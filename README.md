@@ -251,6 +251,10 @@ See the [Tailwind docs](https://tailwindcss.com/) for more info on how to use Ta
 Variables to be used in Tailwind classes must be defined as CSS variables in [`app/assets/css/tailwind.css`](app/assets/css/tailwind.css). For colours, define them in HSL values without commas. You can also define dark mode-specific values inside the `.dark` class in that file.
 
 ## Install & Run
+> [!IMPORTANT]
+> Installing this repo locally requires installing `@idn-au` NPM packages on the GitHub registry, which requires a token with permissions to access.
+> Read the [GitHub docs](https://docs.github.com/en/packages/working-with-a-github-packages-registry/working-with-the-npm-registry#installing-a-package) for more info.
+
 To install, ensure [pnpm](https://pnpm.io/) is installed, then run:
 
 ```bash
