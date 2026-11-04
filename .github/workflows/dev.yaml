@@ -29,15 +29,14 @@ jobs:
         with:
           push: true
           tags: ghcr.io/idn-au/idnau:dev
+          secrets: |
+            "NPM_TOKEN=${{ secrets.GITHUB_TOKEN }}"
   deploy:
     needs: publish
     runs-on: self-hosted
     environment:
       name: development
       url: https://dev.indigenousdatacommons.org
-#    env:
-#      STUDIO_GITHUB_CLIENT_ID: ${{ secrets.STUDIO_GITHUB_CLIENT_ID }}
-#      STUDIO_GITHUB_CLIENT_SECRET: ${{ secrets.STUDIO_GITHUB_CLIENT_SECRET }}
     steps:
     - uses: actions/checkout@v7
     - name: Stop current website if exists

@@ -1,28 +1,28 @@
-import type {ButtonVariants} from "~/components/ui/button";
+import type { ButtonVariants } from "~/components/ui/button";
 
-export type SPARQLResultsJSON = {
+export interface SPARQLResultsJSON {
     head: {
         vars?: string[];
         link?: string[];
-    },
+    };
     results?: {
         bindings: Record<string, {
-            type: "uri" | "literal" | "bnode";
-            value: string;
+            "type": "uri" | "literal" | "bnode";
+            "value": string;
             "xml:lang"?: string;
-            datatype?: string;
+            "datatype"?: string;
         }>[];
-    },
+    };
     boolean?: boolean;
-};
+}
 
-export type TimelineItem = {
+export interface TimelineItem {
     title: string;
     description?: string;
     date: string;
-};
+}
 
-export type PublicationItem = {
+export interface PublicationItem {
     title: string;
     description?: string;
     date: string;
@@ -31,16 +31,16 @@ export type PublicationItem = {
     url?: string;
     publisher?: string;
     idn?: boolean;
-};
+}
 
-export type NewsItem = {
+export interface NewsItem {
     title: string;
     description: string;
     date: string;
     img?: string;
-};
+}
 
-export type EventItem = {
+export interface EventItem {
     title: string;
     description?: string;
     start: string; // datetime
@@ -48,16 +48,16 @@ export type EventItem = {
     location?: string;
     url?: string;
     img?: string;
-};
+}
 
 export type ScoreType = "fair" | "care";
 
-export type ScoreDef = {
+export interface ScoreDef {
     key: string;
     title?: string;
     description: string;
     scores?: ScoreDef[];
-};
+}
 
 export type CustomIDCButtonVariants = "red" | "yellow" | "green" | "blue" | "black" | "dark-ghost";
 

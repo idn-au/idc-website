@@ -18,25 +18,30 @@ const props = withDefaults(defineProps<{
         <div :class="props.imgHalf ? 'flex-1' : 'grow flex flex-col'">
             <CardHeader v-if="$slots.title || $slots.header" class="card-header">
                 <slot name="header">
-                    <CardTitle v-if="$slots.title" class="font-normal text-xl"><slot name="title" mdc-unwrap="p" /></CardTitle>
-                    <CardDescription v-if="$slots.description"><slot name="description" mdc-unwrap="p" /></CardDescription>
+                    <CardTitle v-if="$slots.title" class="font-normal text-xl">
+                        <slot name="title" mdcUnwrap="p" />
+                    </CardTitle>
+                    <CardDescription v-if="$slots.description">
+                        <slot name="description" mdcUnwrap="p" />
+                    </CardDescription>
                 </slot>
             </CardHeader>
             <CardContent :class="`card-body grow ${$slots.title || $slots.header ? 'pt-6' : ''}`">
                 <slot />
             </CardContent>
             <CardFooter v-if="$slots.footer" class="pt-2">
-                <slot name="footer" mdc-unwrap="p" />
+                <slot name="footer" mdcUnwrap="p" />
             </CardFooter>
         </div>
         <div v-if="$slots.img" :class="`flex shrink-0 justify-center items-center p-3 img ${props.imgHalf ? 'flex-1' : ''}`">
-            <slot name="img" mdc-unwrap="p" />
+            <slot name="img" mdcUnwrap="p" />
         </div>
     </ShadCard>
 </template>
 
 <style scoped>
-h3, :deep(h3) {
+h3,
+:deep(h3) {
     margin: 0;
 }
 

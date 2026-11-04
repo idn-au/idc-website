@@ -1,5 +1,5 @@
-import type {ContentNavigationItem} from "@nuxt/content";
-import {externalLinks} from "~/utils/consts";
+import type { ContentNavigationItem } from "@nuxt/content";
+import { externalLinks } from "~/utils/consts";
 
 export function formatDate(date: string): string {
     let options: Intl.DateTimeFormatOptions = {
@@ -13,29 +13,30 @@ export function formatDate(date: string): string {
             ...options,
             hour: "numeric",
             minute: "numeric",
-        }
+        };
     }
 
     return new Date(date).toLocaleDateString("en-AU", options);
 }
 
 export function filterPartialPaths(items: ContentNavigationItem[]): ContentNavigationItem[] {
-    return items.filter(i => !i.path.split("/").some(s => s.startsWith("_"))).map(i => {
+    return items.filter(i => !i.path.split("/").some(s => s.startsWith("_"))).map((i) => {
         return {
             ...i,
             children: i.children ? filterPartialPaths(i.children) : undefined,
-        }
+        };
     });
 }
 
 function mergeExternalLinks(nav: ContentNavigationItem[], external: ContentNavigationItem[]): ContentNavigationItem[] {
     const links = nav.filter(n => n.path !== "/");
 
-    external.forEach(e => {
+    external.forEach((e) => {
         const parent = links.find(l => l.path === e.path);
         if (!parent) {
             links.push(e);
-        } else {
+        }
+        else {
             const newChildren = e.children?.filter(c1 => !parent.children?.map(c2 => c2.path).includes(c1.path));
             parent.children = [...(parent.children || []), ...(newChildren || [])].sort((a, b) => a.stem.localeCompare(b.stem));
         }
@@ -50,7 +51,8 @@ export async function getNavigation(includeExternal: boolean = false): Promise<C
 
     if (includeExternal) {
         return mergeExternalLinks(navigation, externalLinks);
-    } else {
+    }
+    else {
         return navigation;
     }
 }

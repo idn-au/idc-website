@@ -10,6 +10,8 @@ RUN npm install -g corepack
 RUN corepack enable
 RUN apk add --no-cache python3 py3-pip make build-base
 COPY --link package.json pnpm-workspace.yaml pnpm-lock.yaml ./
+RUN --mount=type=secret,id=NPM_TOKEN,env=NPM_TOKEN \
+    pnpm config set '//npm.pkg.github.com/:_authToken' "${NPM_TOKEN}"
 RUN pnpm install --frozen-lockfile
 COPY --link . .
 RUN pnpm build

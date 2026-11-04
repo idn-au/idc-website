@@ -1,53 +1,54 @@
 <script setup lang="ts">
-import type {HTMLAttributes} from "vue";
+import type { HTMLAttributes } from "vue";
+import { IDCLogo } from "@idn-au/idn-lib";
 import { useCycleList, useIntervalFn } from "@vueuse/core";
 
 const props = defineProps<{
-	class?: HTMLAttributes["class"];
+    class?: HTMLAttributes["class"];
 }>();
 
 const images = [
-	"/img/unsplash/dylan-shaw-4LJh9TAcImw-unsplash.jpg",
-	"/img/unsplash/caleb-V18GNaBeZqM-unsplash.jpg",
-	"/img/unsplash/christian-bass-gB_RcoohBko-unsplash.jpg",
-	"/img/unsplash/connor-home-dtmz4CDRXqw-unsplash.jpg",
-	"/img/unsplash/rene-riegal-0VFr6ub7HlA-unsplash.jpg",
-	"/img/unsplash/iain-gkGle4k_fwM-unsplash.jpg",
+    "/img/unsplash/dylan-shaw-4LJh9TAcImw-unsplash.jpg",
+    "/img/unsplash/caleb-V18GNaBeZqM-unsplash.jpg",
+    "/img/unsplash/christian-bass-gB_RcoohBko-unsplash.jpg",
+    "/img/unsplash/connor-home-dtmz4CDRXqw-unsplash.jpg",
+    "/img/unsplash/rene-riegal-0VFr6ub7HlA-unsplash.jpg",
+    "/img/unsplash/iain-gkGle4k_fwM-unsplash.jpg",
 ];
 
 const seconds = 10;
 
 const { state, next, prev, go } = useCycleList(images);
 const { pause, resume, isActive } = useIntervalFn(() => {
-	next();
+    next();
 }, 1000 * seconds);
 </script>
 
 <template>
-	<div class="h-dvh -mt-[108px] md:-mt-[126px] flex items-end relative overflow-hidden">
-		<Transition>
-			<NuxtImg :src="state" :key="state" class="w-full h-full object-cover absolute -z-2" />
-		</Transition>
-		<IDCLogo class="absolute fill-white opacity-20 -z-1 -right-[30%] -bottom-[20%]" />
-		<div class="text-white ml-20 mb-60 lg:w-1/2">
-			<h1 class="text-5xl md:text-6xl lg:text-7xl leading-snug">
-				Welcome to the Indigenous Data Commons
-			</h1>
-			<p class="text-1xl md:text-2xl lg:text-3xl leading-snug">
-				A national shared space that establishes the ethical approach to governing Indigenous data in Australia  
-			</p>
-		</div>
-	</div>
+    <div class="h-dvh -mt-[108px] md:-mt-[126px] flex items-end relative overflow-hidden">
+        <Transition>
+            <NuxtImg :key="state" :src="state" class="w-full h-full object-cover absolute -z-2" />
+        </Transition>
+        <IDCLogo class="absolute fill-white opacity-20 -z-1 -right-[30%] -bottom-[20%]" />
+        <div class="text-white mx-8 sm:ml-12 md:ml-20 mb-24 sm:mb-48 md:mb-60 lg:w-1/2">
+            <h1 class="text-5xl! md:text-6xl! lg:text-7xl! leading-snug">
+                Welcome to the Indigenous Data Commons
+            </h1>
+            <p class="text-xl md:text-2xl lg:text-3xl leading-snug">
+                A national shared space that establishes the ethical approach to governing Indigenous data in Australia
+            </p>
+        </div>
+    </div>
 </template>
 
 <style scoped>
 .v-enter-active,
 .v-leave-active {
-	transition: opacity 2s ease;
+    transition: opacity 2s ease;
 }
 
 .v-enter-from,
 .v-leave-to {
-	opacity: 0;
+    opacity: 0;
 }
 </style>",

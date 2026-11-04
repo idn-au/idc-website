@@ -3,7 +3,7 @@
 </script>
 
 <template>
-	<Accordion type="single" collapsible>
-		<slot mdc-unwrap="p" />
-	</Accordion>
+    <Accordion type="single" collapsible>
+        <slot mdcUnwrap="p" />
+    </Accordion>
 </template>
