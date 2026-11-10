@@ -32,7 +32,7 @@ export const events: EventItem[] = [
         start: "2026-12-01",
         end: "2026-12-02",
         location: "Naarm/Melbourne",
-        url: "https://ardc.edu.au/event/indigenous-datathon-2026/",
+        url: "https://publichealth.unimelb.edu.au/onemda/research-group/indigenous-studies-unit/indigenous-data-network/idn-pages/indigenous-datathon-2026",
         img: "",
     },
     {
