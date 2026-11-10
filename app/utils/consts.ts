@@ -35,21 +35,15 @@ export const externalLinks: ContentNavigationItem[] = [
                 description: "Learn about the structure and standards underpinning the IDN Catalogue Profile, including how records are organised, described, and made discoverable within the Indigenous Data Network.",
             },
             {
-                title: "Agent Database",
-                path: "https://agentsdb.idnau.org",
-                stem: "5.tools/3.agent-database",
-                description: "Access and contribute to a directory of organisations, communities, and researchers involved in Indigenous data initiatives and collaborations.",
-            },
-            {
                 title: "Metadata Entry Tool",
                 path: "https://metadata.idnau.org",
-                stem: "5.tools/4.metadata-entry-tool",
+                stem: "5.tools/3.metadata-entry-tool",
                 description: "Create metadata records to support the discoverability, governance, and reuse of Indigenous data in line with Indigenous Data Commons principles.",
             },
             {
                 title: "Search portal",
                 path: "https://data.idnau.org/search",
-                stem: "5.tools/5.search-portal",
+                stem: "5.tools/4.search-portal",
                 description: "Explore datasets and records spatially through an interactive map interface.",
             },
         ],
