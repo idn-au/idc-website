@@ -9,7 +9,7 @@ export const events: EventItem[] = [
         img: "",
     },
     {
-        title: "IDG Masterclass 2026",
+        title: "First Nations Data Governance & Sovereignty",
         description: "",
         start: "2026-11-11",
         end: "2026-11-12",
@@ -18,10 +18,10 @@ export const events: EventItem[] = [
         img: "",
     },
     {
-        title: "First Nations Data Governance & Sovereignty",
+        title: "IDG Masterclass 2026",
         description: "",
         start: "2026-11-30",
-        end: "2026-11-30",
+        end: "",
         location: "Naarm/Melbourne",
         url: "https://publichealth.unimelb.edu.au/onemda/research-group/indigenous-studies-unit/indigenous-data-network/idn-pages/indigenous-governance-masterclass-2026",
         img: "",
