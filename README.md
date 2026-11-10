@@ -278,8 +278,8 @@ University of Melbourne
 
 For policy:
 
-**Levi Murray**  
-**Strategic Data Manager**  
+**Louise Murray**  
+**Data Manager**  
 Indigenous Data Network  
 University of Melbourne  
-[levi.murray@unimelb.edu.au](mailto:levi.murray@unimelb.edu.au)
+[louise.murray@unimelb.edu.au](mailto:louise.murray@unimelb.edu.au)
