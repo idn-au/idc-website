@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import type { ContentNavigationItem } from "@nuxt/content";
-import { Acknowledgement, ARDCFooter, IDCFooter, IDCHeader, ScrollToTopButton } from "@idn-au/idn-lib";
+import { Acknowledgement, IDCFooter, IDCHeader, ScrollToTopButton } from "@idn-au/idn-lib";
 import { getNavigation } from "~/utils/helpers";
 
 const route = useRoute();
@@ -18,7 +18,6 @@ const { data: navigation } = await useAsyncData("navigation-merged", () => getNa
             <slot />
         </main>
         <Acknowledgement />
-        <ARDCFooter v-if="route.path === '/'" />
         <IDCFooter :navigation="navigation" :external="false" />
         <ScrollToTopButton />
     </div>

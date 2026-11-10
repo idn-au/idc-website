@@ -30,7 +30,7 @@ const { pause, resume, isActive } = useIntervalFn(() => {
             <NuxtImg :key="state" :src="state" class="w-full h-full object-cover absolute -z-2" />
         </Transition>
         <IDCLogo class="absolute fill-white opacity-20 -z-1 -right-[30%] -bottom-[20%]" />
-        <div class="text-white mx-8 sm:ml-12 md:ml-20 mb-24 sm:mb-48 md:mb-60 lg:w-1/2">
+        <div class="text-white mx-8 sm:ml-12 md:ml-20 mb-20 lg:w-1/2">
             <h1 class="text-5xl! md:text-6xl! lg:text-7xl! leading-snug">
                 Welcome to the Indigenous Data Commons
             </h1>
