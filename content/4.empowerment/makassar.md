@@ -1,5 +1,6 @@
 ---
 title: Knowledge-holders from Indonesia and the Northern Territory Come Together on Yolŋu and Larrakia Country
+navigation: false
 description: A recent workshop brought together Yolŋu, Makassan and other experts from Indonesia and Australia in a cultural exchange of information and data between knowledge holders and institutions.
 ---
 

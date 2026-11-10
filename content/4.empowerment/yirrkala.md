@@ -1,5 +1,6 @@
 ---
 title: Field Work in Yirrkala
+navigation: false
 description: A team from the University of Melbourne travelled to Yirrkala in Northeast Arnhem Land to support the digitisation and preservation of a nationally significant archive housed there
 ---
 

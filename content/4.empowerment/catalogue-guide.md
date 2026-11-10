@@ -1,5 +1,6 @@
 ---
 title: Making an Indigenous Data Catalogue - Guide
+navigation: false
 description: A practical guide to planning, establishing, publishing and operating an Indigenous data catalogue.
 ---
 
