@@ -16,6 +16,7 @@ description: A recent workshop brought together Yolŋu, Makassan and other exper
 
 **Reviewed by** Professor Marcia Langton (The University of Melbourne), Jenny Fewster and Jo Savill (ARDC)
 
+**Published output**: [Reflections on sustaining Trade and Kinship Traditions between Makassans and Yolŋu](https://melbourneasiareview.edu.au/reflections-on-sustaining-trade-and-kinship-traditions-between-makassans-and-yolnu/?print=pdf)
 
 The _Improving Indigenous Research Capabilities_ project workshop, _Sustaining Relations Between Makassans and Yolŋu: living history in the present and future_, brought together Yolŋu, Makassan and other experts from Indonesia and Australia in a cultural exchange of information and data between knowledge holders and institutions in Indonesia and Australia. Historical and contemporary data sharing relies on critical relationships that support such exchanges. Thus, discussions focused on future research and cultural collaborations exploring the centuries-long relationships between peoples from Makassar, South Sulawesi, and Indigenous peoples of Northern Australia.
 
