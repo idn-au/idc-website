@@ -30,7 +30,7 @@ export const externalLinks: ContentNavigationItem[] = [
         children: [
             {
                 title: "IDN Catalogue Profile",
-                path: "https://data.idnau.org/pid/cp",
+                path: "https://data.idnau.org/pid/cp/guide",
                 stem: "5.tools/2.idn-catalogue-profile",
                 description: "Learn about the structure and standards underpinning the IDN Catalogue Profile, including how records are organised, described, and made discoverable within the Indigenous Data Network.",
             },
